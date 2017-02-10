@@ -1,0 +1,13 @@
+version=52;
+center[]={4577.6328,260.92596,15363.27};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Logic";
+		name="cupcakes_secret_littlebird";
+		id=307;
+		type="Logic";
+	};
+};

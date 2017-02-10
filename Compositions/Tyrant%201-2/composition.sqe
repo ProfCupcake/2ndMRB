@@ -1,0 +1,542 @@
+version=52;
+center[]={5479.9058,27.299999,15003.514};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=8;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.30712891,0.0014381409,-0.38183594};
+					angles[]={0,3.2687042,0};
+				};
+				side="West";
+				flags=6;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="SERGEANT";
+					description="Tyrant 1-2 Lead";
+					isPlayable=1;
+				};
+				id=175;
+				type="rhsusf_usmc_marpat_wd_teamleader";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.8168945,0.027435303,2.4521484};
+					angles[]={0,3.0995815,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="SERGEANT";
+					description="Tyrant 1-2 EOD";
+					isPlayable=1;
+				};
+				id=176;
+				type="rhsusf_usmc_marpat_wd_explosives";
+				atlOffset=0.025997162;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={2.1831055,0.036437988,0.94433594};
+					angles[]={0,3.4512479,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="SERGEANT";
+					description="Tyrant 1-2 Engineer";
+					isPlayable=1;
+				};
+				id=177;
+				type="rhsusf_usmc_marpat_wd_engineer";
+				atlOffset=0.034999847;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.8657227,0.0014381409,0.38574219};
+					angles[]={0,2.8803508,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CORPORAL";
+					description="Tyrant 1-2 AR";
+					isPlayable=1;
+				};
+				id=178;
+				type="rhsusf_usmc_marpat_wd_autorifleman_m249";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={2.2114258,0.011436462,-1.3955078};
+					angles[]={0,3.1963427,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CORPORAL";
+					description="Tyrant 1-2 DM";
+					isPlayable=1;
+				};
+				id=179;
+				type="rhsusf_usmc_marpat_wd_marksman";
+				atlOffset=0.0099983215;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item5
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.9106445,0.012435913,-2.9638672};
+					angles[]={0,4.0229654,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					skill=0.60000002;
+					description="Tyrant 1-2";
+					isPlayable=1;
+				};
+				id=180;
+				type="rhsusf_usmc_marpat_wd_rifleman";
+				atlOffset=0.010997772;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item6
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-2.1342773,0.0014381409,0.42285156};
+					angles[]={0,2.9379301,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					skill=0.60000002;
+					description="Tyrant 1-2";
+					isPlayable=1;
+				};
+				id=181;
+				type="rhsusf_usmc_marpat_wd_rifleman";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item7
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.12841797,0.02743721,1.3720703};
+					angles[]={0,3.450794,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="SERGEANT";
+					description="Tyrant 1-2 SARC";
+					isPlayable=1;
+				};
+				id=182;
+				type="rhsusf_navy_marpat_wd_medic";
+				atlOffset=0.025999069;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isSurrendered";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_isHandcuffed";
+						expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+			combatMode="RED";
+		};
+		id=174;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="_this setGroupID [_value];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="Tyrant 1-2";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+};

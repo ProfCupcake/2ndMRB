@@ -1,0 +1,75 @@
+version=52;
+center[]={5478.5107,27.299999,14997.324};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.87060547,0.50477791,1.0830078};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="thebox";
+		};
+		id=183;
+		type="Gunrack1";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item1
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={0.87109375,0,-1.0839844};
+		};
+		name="home_base_spawn_location";
+		id=200;
+		type="Logic";
+	};
+};

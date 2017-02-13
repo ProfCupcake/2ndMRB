@@ -8,14 +8,14 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=52;
+		nextID=62;
 	};
 	class Camera
 	{
-		pos[]={9467.6348,226.70018,10022.568};
-		dir[]={0.39759368,-0.71379369,-0.57655931};
-		up[]={0.40522072,0.70035589,-0.58761966};
-		aside[]={-0.82323587,5.7742e-008,-0.56770056};
+		pos[]={9464.1963,196.90088,10002.692};
+		dir[]={-0.09550678,-0.82830876,-0.55207449};
+		up[]={-0.14119717,0.56027257,-0.81618488};
+		aside[]={-0.98536515,1.5611295e-007,0.17046499};
 	};
 };
 binarizationWanted=0;
@@ -36,13 +36,15 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"ace_finger",
 	"ace_map_gestures",
-	"ace_respawn"
+	"ace_respawn",
+	"ace_repair",
+	"ace_advanced_fatigue"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -147,6 +149,20 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item16
+		{
+			className="ace_repair";
+			name="ACE3 - Repair";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item17
+		{
+			className="ace_advanced_fatigue";
+			name="ACE3 - Advanced Fatigue";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 randomSeed=2112859;
@@ -240,7 +256,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=29;
+		items=31;
 		class Item0
 		{
 			dataType="Group";
@@ -1937,10 +1953,21 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9448.8916,139.995,9960.6963};
-				angles[]={0.027990974,5.732656,0.0093286335};
+				position[]={9562.7227,139.995,9950.0703};
 			};
-			id=41;
+			name="cupcakes_secret_littlebird";
+			id=51;
+			type="Logic";
+		};
+		class Item21
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9448.1934,139.995,9947.7871};
+				angles[]={0,5.732656,0};
+			};
+			id=52;
 			type="ace_captives_moduleSettings";
 			class CustomAttributes
 			{
@@ -2004,15 +2031,15 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item21
+		class Item22
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9444.6025,139.995,9958.335};
-				angles[]={0.013332055,5.7326598,0.0093286335};
+				position[]={9443.9043,139.995,9945.4258};
+				angles[]={0,5.7326598,0};
 			};
-			id=42;
+			id=53;
 			type="ACE_ModuleExplosive";
 			class CustomAttributes
 			{
@@ -2076,15 +2103,15 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item22
+		class Item23
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9440.9453,139.995,9955.9775};
-				angles[]={0.015998369,5.7326598,0.0079935296};
+				position[]={9440.2471,139.995,9943.0684};
+				angles[]={0,5.7326598,0};
 			};
-			id=43;
+			id=54;
 			type="ACE_ModuleHearing";
 			class CustomAttributes
 			{
@@ -2167,15 +2194,15 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item23
+		class Item24
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9452.292,139.995,9963.0205};
-				angles[]={0.010664274,5.732656,0.02666023};
+				position[]={9451.5938,139.995,9950.1113};
+				angles[]={0,5.732656,0};
 			};
-			id=44;
+			id=55;
 			type="ACE_ModuleMap";
 			class CustomAttributes
 			{
@@ -2296,15 +2323,15 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item24
+		class Item25
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9446.5625,139.995,9953.3828};
-				angles[]={0,5.7326598,0};
+				position[]={9443.3086,139.995,9939.0703};
+				angles[]={0,5.732656,0};
 			};
-			id=45;
+			id=56;
 			type="ModuleCurator_F";
 			class CustomAttributes
 			{
@@ -2323,7 +2350,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="#adminLogged";
+							value="#adminVoted";
 						};
 					};
 				};
@@ -2406,15 +2433,15 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item25
+		class Item26
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9449.5449,139.995,9955.0957};
+				position[]={9446.6934,139.995,9941.3301};
 				angles[]={0,5.732656,0};
 			};
-			id=46;
+			id=57;
 			type="ace_finger_moduleSettings";
 			class CustomAttributes
 			{
@@ -2459,15 +2486,15 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item26
+		class Item27
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9452.3389,139.995,9956.2461};
+				position[]={9450.2559,139.995,9943.4941};
 				angles[]={0,5.732656,0};
 			};
-			id=47;
+			id=58;
 			type="ace_map_gestures_moduleSettings";
 			class CustomAttributes
 			{
@@ -2569,16 +2596,15 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item27
+		class Item28
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9454.6738,139.99498,9957.9824};
+				position[]={9453.9688,139.995,9945.7549};
 			};
-			id=48;
+			id=59;
 			type="ACE_ModuleRespawn";
-			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2622,16 +2648,299 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item28
+		class Item29
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9562.7227,139.995,9950.0703};
+				position[]={9454.7031,139.995,9952.2246};
 			};
-			name="cupcakes_secret_littlebird";
-			id=51;
-			type="Logic";
+			id=60;
+			type="ACE_moduleRepairSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleRepairSettings_fullRepairLocation";
+					expression="_this setVariable ['fullRepairLocation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleRepairSettings_engineerSetting_fullRepair";
+					expression="_this setVariable ['engineerSetting_fullRepair',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleRepairSettings_engineerSetting_Repair";
+					expression="_this setVariable ['engineerSetting_Repair',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_moduleRepairSettings_consumeItem_ToolKit";
+					expression="_this setVariable ['consumeItem_ToolKit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_moduleRepairSettings_repairDamageThreshold";
+					expression="_this setVariable ['repairDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.60000002;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ACE_moduleRepairSettings_wheelRepairRequiredItems";
+					expression="_this setVariable ['wheelRepairRequiredItems',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ACE_moduleRepairSettings_repairDamageThreshold_Engineer";
+					expression="_this setVariable ['repairDamageThreshold_Engineer',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.30000001;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ACE_moduleRepairSettings_engineerSetting_Wheel";
+					expression="_this setVariable ['engineerSetting_Wheel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ACE_moduleRepairSettings_addSpareParts";
+					expression="_this setVariable ['addSpareParts',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
+		class Item30
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9457.333,139.995,9948.0566};
+			};
+			id=61;
+			type="ace_advanced_fatigue_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_advanced_fatigue_moduleSettings_TerrainGradientFactor";
+					expression="_this setVariable ['TerrainGradientFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_advanced_fatigue_moduleSettings_Enabled";
+					expression="_this setVariable ['Enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_advanced_fatigue_moduleSettings_RecoveryFactor";
+					expression="_this setVariable ['RecoveryFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_advanced_fatigue_moduleSettings_LoadFactor";
+					expression="_this setVariable ['LoadFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_advanced_fatigue_moduleSettings_PerformanceFactor";
+					expression="_this setVariable ['PerformanceFactor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1.2;
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 };

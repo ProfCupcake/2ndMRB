@@ -7,7 +7,7 @@ Template missions for various terrains. Each one should ideally be named "#2MRB_
 ## New Template Checklist
 
 * Compositions
-	* Spawn & ammobox
+	* Spawn & ammobox (thebox & homebase)
 	* Tyrants 1, 1-1, 1-2
 	* Holding area
 	* "Secret" little bird spawn location

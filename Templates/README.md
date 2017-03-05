@@ -19,3 +19,4 @@ Template missions for various terrains. Each one should ideally be named "#2MRB_
 		* Select Respawn Position
 	* Debug Console (under General -> States, set to allow for admins)
 	* Set IND hostile
+	* Disable AI

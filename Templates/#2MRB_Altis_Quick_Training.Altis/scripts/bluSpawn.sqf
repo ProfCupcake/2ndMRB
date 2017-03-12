@@ -12,3 +12,9 @@ _startMarkTwo setMarkerTextLocal "Blufor Start";
 
 playerReturn = _spawnee addAction ["RTB", "player call returnScript"];
 _spawnee addEventHandler ["Killed", "player call returnScript"];
+
+bluforCount = bluforCount + 1;
+
+playerTeam = 1;
+
+publicVariable "bluforCount";

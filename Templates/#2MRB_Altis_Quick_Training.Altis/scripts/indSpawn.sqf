@@ -12,3 +12,9 @@ _startMarkTwo setMarkerTextLocal "Indfor Start";
 
 playerReturn = _spawnee addAction ["RTB", "player call returnScript"];
 _spawnee addEventHandler ["Killed", "player call returnScript"];
+
+indforCount = indforCount + 1;
+
+playerTeam = 3;
+
+publicVariable "indforCount";

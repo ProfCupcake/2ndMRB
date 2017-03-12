@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={21019.174,2645.9226,7803.0913};
-		dir[]={-0.14815976,-0.93583542,-0.31980801};
-		up[]={-0.39339617,0.35237095,-0.84915888};
-		aside[]={-0.90736252,-2.7951319e-007,0.42036045};
+		dir[]={-0.026827237,-0.97867316,-0.20366856};
+		up[]={-0.12780918,0.20536077,-0.97030568};
+		aside[]={-0.99143732,-3.472087e-008,0.13059247};
 	};
 };
 binarizationWanted=0;
@@ -2984,7 +2984,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item59

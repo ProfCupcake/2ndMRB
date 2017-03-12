@@ -180,9 +180,21 @@ returnScript = {
 
 	[_returnee] join original;
 
-	_blue = { alive _x } count units groupB;
-	_red = { alive _x } count units groupO;
-	_green = { alive _x } count units groupI;
-
-	"Remaining:\nBlufor: " + str _blue + "\nOpfor: " + str _red + "\nIndfor: " + str _green call print_text;
+	switch (playerTeam) do {
+		case 1: {
+			bluforCount = bluforCount - 1;
+			publicVariable "bluforCount";
+		};
+		case 2: {
+			opforCount = opforCount - 1;
+			publicVariable "opforCount";
+		};
+		case 3: {
+			indforCount = indforCount - 1;
+			publicVariable "indforCount";
+		};
+	};
+	
+	playerTeam = 0;
+	"Remaining:\nBlufor: " + str bluforCount + "\nOpfor: " + str opforCount + "\nIndfor: " + str indforCount call print_text;
 };

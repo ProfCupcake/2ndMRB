@@ -12,3 +12,9 @@ _startMarkTwo setMarkerTextLocal "Opfor Start";
 
 playerReturn = _spawnee addAction ["RTB", "player call returnScript"];
 _spawnee addEventHandler ["Killed", "player call returnScript"];
+
+opforCount = opforCount + 1;
+
+playerTeam = 2;
+
+publicVariable "opforCount";

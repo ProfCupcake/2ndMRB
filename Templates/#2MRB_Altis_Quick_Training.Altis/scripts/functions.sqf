@@ -27,7 +27,7 @@ cqcOut = {
 
 		_spawnPoint deleteAt _index;
 
-		_iPosition = _spawnPoint select 0;
+		_iPosition = selectRandom _spawnPoint;
 
 		bSpawn = getMarkerPos (_selectArea + "_" + str _bPosition);
 		oSpawn = getMarkerPos (_selectArea + "_" + str _oPosition);
@@ -111,7 +111,7 @@ movement = {
 
 		_spawnPoint deleteAt _index;
 
-		_iPosition = _spawnPoint select 0;
+		_iPosition = selectRandom _spawnPoint;
 
 		bSpawn = getMarkerPos (_selectArea + "_" + str _bPosition);
 		oSpawn = getMarkerPos (_selectArea + "_" + str _oPosition);

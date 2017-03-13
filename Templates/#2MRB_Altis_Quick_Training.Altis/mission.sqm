@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1050;
+		nextID=1053;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9171.1377,20.424181,21650.35};
-		dir[]={-0.66778922,-0.74432057,0.0070093675};
-		up[]={-0.74427909,0.66782099,0.0078123095};
-		aside[]={0.01049622,5.0087692e-008,0.99994481};
+		pos[]={9167.0205,22.346331,21643.781};
+		dir[]={0.085325979,-0.60334027,0.79290783};
+		up[]={0.064553604,0.79748338,0.59987843};
+		aside[]={0.99426115,4.0250598e-008,-0.10699376};
 	};
 };
 binarizationWanted=0;
@@ -48,13 +48,15 @@ addons[]=
 	"CUP_CAMP_Armory_Misc_Info_Board",
 	"A3_Ui_F",
 	"CUP_CWA_Misc",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Supplies_F_Exp_Ammoboxes",
+	"ace_dragging"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=25;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -207,6 +209,20 @@ class AddonsMetaData
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
+		};
+		class Item23
+		{
+			className="A3_Supplies_F_Exp";
+			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item24
+		{
+			className="ace_dragging";
+			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -371,7 +387,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=104;
+		items=107;
 		class Item0
 		{
 			dataType="Object";
@@ -3815,6 +3831,183 @@ class Mission
 			id=166;
 			type="Logic";
 			atlOffset=-0.00012302399;
+		};
+		class Item104
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9161.8662,14.783031,21654.506};
+				angles[]={0.0013439035,4.2182865,6.2818413};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="BLUbox";
+			};
+			id=1050;
+			type="Box_NATO_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item105
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9163.8027,14.781528,21655.563};
+				angles[]={0,4.2225275,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="OPbox";
+			};
+			id=1051;
+			type="Box_CSAT_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item106
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9165.7266,14.782499,21656.539};
+				angles[]={0,4.2406611,0.0012915437};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="INDbox";
+			};
+			id=1052;
+			type="Box_AAF_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 };

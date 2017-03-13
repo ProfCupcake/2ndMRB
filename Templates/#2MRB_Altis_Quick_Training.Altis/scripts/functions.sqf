@@ -27,7 +27,7 @@ cqcOut = {
 
 		_spawnPoint deleteAt _index;
 
-		_iPosition = _spawnPoint select 0;
+		_iPosition = selectRandom _spawnPoint;
 
 		bSpawn = getMarkerPos (_selectArea + "_" + str _bPosition);
 		oSpawn = getMarkerPos (_selectArea + "_" + str _oPosition);
@@ -111,7 +111,7 @@ movement = {
 
 		_spawnPoint deleteAt _index;
 
-		_iPosition = _spawnPoint select 0;
+		_iPosition = selectRandom _spawnPoint;
 
 		bSpawn = getMarkerPos (_selectArea + "_" + str _bPosition);
 		oSpawn = getMarkerPos (_selectArea + "_" + str _oPosition);
@@ -151,7 +151,7 @@ returnScript = {
 
 	{
 		_returnee removeAction _x;
-	}forEach playerActions;
+	} forEach playerActions;
 	
 	playerActions = [];
 
@@ -162,57 +162,12 @@ returnScript = {
 	_sideSwitchGroup = createGroup civilian;
 	[player] joinSilent _sideSwitchGroup;
 	
-	call returnOutfit;
-	
 	format ["Active:-\n\nBLUFOR: %1\nOPFOR: %2\nINDFOR: %1", {side _x == west} count allPlayers, {side _x == east} count allPlayers, {side _x == independent} count allPlayers] call print_text;
 };
 
-setOutfitB = {
-	type = _this;
-	
-	switch (type) do {
-		case 1: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Blufor_MARPATWD.sqf";
-		};
-		case 2: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Blufor_OCP.sqf";
-		};
-		case 3: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Blufor_MARPATD.sqf";
-		};
-	};
-};
-
-setOutfitO = {
-	type = _this;
-	
-	switch (type) do {
-		case 1: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Opfor_TTsKOForest.sqf";
-		};
-		case 2: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Opfor_VDVFlora.sqf";
-		};
-		case 3: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Opfor_TTsKOMountain.sqf";
-		};
-	};
-};
-
-setOutfitI = {
-	type = _this;
-	
-	switch (type) do {
-		case 1: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Indfor_SpecterSFlora.sqf";
-		};
-		case 2: {
-			call compile preprocessfilelinenumbers "scripts\loadout\Indfor_MSVEMR.sqf";
-		};
-
-	};
-};
-
-returnOutfit = {
-	call compile preprocessfilelinenumbers "scripts\loadout\2mrb_default.sqf";
+loadoutBoxesSetup = 
+{
+	BLUbox addAction ["<t color='#0080ff'>Rifleman</t>", "loadouts\blufor\rifleman.sqf"];
+	OPbox addAction ["<t color='#ff0000'>Rifleman</t>", "loadouts\opfor\rifleman.sqf"];
+	INDbox addAction ["<t color='#00ff00'>Rifleman</t>", "loadouts\indfor\rifleman.sqf"];
 };

@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1053;
+		nextID=1054;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9167.0205,22.346331,21643.781};
-		dir[]={0.085325979,-0.60334027,0.79290783};
-		up[]={0.064553604,0.79748338,0.59987843};
-		aside[]={0.99426115,4.0250598e-008,-0.10699376};
+		pos[]={9166.5586,19.497557,21648.977};
+		dir[]={-0.074487455,-0.64624614,0.75950241};
+		up[]={-0.063078351,0.76312685,0.64316648};
+		aside[]={0.9952383,3.0640513e-007,0.097607896};
 	};
 };
 binarizationWanted=0;
@@ -387,7 +387,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=107;
+		items=108;
 		class Item0
 		{
 			dataType="Object";
@@ -3848,6 +3848,7 @@ class Mission
 			};
 			id=1050;
 			type="Box_NATO_Equip_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4007,6 +4008,47 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item107
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9173.2354,14.802925,21650.389};
+				angles[]={0.0039967569,3.556704,0.0039967569};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="FnFbox";
+			};
+			id=1053;
+			type="Box_NATO_Equip_F";
+			atlOffset=1.1444092e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};

@@ -1,8 +1,5 @@
 training_init = 
 {
-	deleteGroup (_this select 0);
-	deleteGroup (_this select 1);
-	deleteGroup (_this select 2);
 	removeAllActions teleportSign;
 };
 
@@ -12,17 +9,12 @@ print_text = {
 
 cqcOut = {
 
-	[groupB, groupO, groupI] call training_init;
+	call training_init;
 	
 	if (isServer) then {
 
 		_cqcArea = ["cqcO1","cqcO2","cqcO3","cqcO4","cqcO5"];
-		_selectArea = selectRandom _cqcArea;
-
-		groupB = createGroup WEST;
-		groupO = createGroup EAST;
-		groupI = createGroup INDEPENDENT;
-
+		_selectArea = selectRandom _cqcArea;\
 		_spawnPoint = [1,2,3];
 
 		_bPosition = selectRandom _spawnPoint;
@@ -41,9 +33,6 @@ cqcOut = {
 		oSpawn = getMarkerPos (_selectArea + "_" + str _oPosition);
 		iSpawn = getMarkerPos (_selectArea + "_" + str _iPosition);
 
-		publicVariable "groupB";
-		publicVariable "groupO";
-		publicVariable "groupI";
 		publicVariable "bSpawn";
 		publicVariable "oSpawn";
 		publicVariable "iSpawn";
@@ -60,12 +49,9 @@ cqcOut = {
 
 cqcIn = {
 
-	[groupB, groupO, groupI] call training_init;
+	call training_init;
 	
 	if (isServer) then {
-		groupB = createGroup WEST;
-		groupO = createGroup EAST;
-		groupI = createGroup INDEPENDENT;
 
 		_ghosthotel = [[21959.9,21013.4,0.00143623], [21988.4,21044.3,0.00143814], [21997.7,20999.7,0.00143814], [21948.9,21053.1,4], [22001.2,21005.9,9]];
 
@@ -89,9 +75,6 @@ cqcIn = {
 
 		iSpawn = selectRandom _spawnPoint; 
 
-		publicVariable "groupB";
-		publicVariable "groupO";
-		publicVariable "groupI";
 		publicVariable "bSpawn";
 		publicVariable "oSpawn";
 		publicVariable "iSpawn";
@@ -109,16 +92,12 @@ cqcIn = {
 
 movement = {
 
-	[groupB, groupO, groupI] call training_init;
+	call training_init;
 	
 	if (isServer) then {		
 
 		_moveArea = ["move01","move02"];
 		_selectArea = selectRandom _moveArea;
-
-		groupB = createGroup WEST;
-		groupO = createGroup EAST;
-		groupI = createGroup INDEPENDENT;
 
 		_spawnPoint = [1,2,3,4,5,6,7,8];
 
@@ -138,9 +117,6 @@ movement = {
 		oSpawn = getMarkerPos (_selectArea + "_" + str _oPosition);
 		iSpawn = getMarkerPos (_selectArea + "_" + str _iPosition);
 
-		publicVariable "groupB";
-		publicVariable "groupO";
-		publicVariable "groupI";
 		publicVariable "bSpawn";
 		publicVariable "oSpawn";
 		publicVariable "iSpawn";
@@ -172,7 +148,12 @@ returnScript = {
 	_returnee = _this;
 
 	_returnee setPos (getPos home_base_spawn_location);
-	_returnee removeAction playerReturn;
+
+	{
+		_returnee removeAction _x;
+	}forEach playerActions;
+	
+	playerActions = [];
 
 	deleteMarker '2mrb_blue_text';
 	deleteMarker '2mrb_red_text';
@@ -181,5 +162,57 @@ returnScript = {
 	_sideSwitchGroup = createGroup civilian;
 	[player] joinSilent _sideSwitchGroup;
 	
+	call returnOutfit;
+	
 	format ["Active:-\n\nBLUFOR: %1\nOPFOR: %2\nINDFOR: %1", {side _x == west} count allPlayers, {side _x == east} count allPlayers, {side _x == independent} count allPlayers] call print_text;
+};
+
+setOutfitB = {
+	type = _this;
+	
+	switch (type) do {
+		case 1: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Blufor_MARPATWD.sqf";
+		};
+		case 2: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Blufor_OCP.sqf";
+		};
+		case 3: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Blufor_MARPATD.sqf";
+		};
+	};
+};
+
+setOutfitO = {
+	type = _this;
+	
+	switch (type) do {
+		case 1: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Opfor_TTsKOForest.sqf";
+		};
+		case 2: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Opfor_VDVFlora.sqf";
+		};
+		case 3: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Opfor_TTsKOMountain.sqf";
+		};
+	};
+};
+
+setOutfitI = {
+	type = _this;
+	
+	switch (type) do {
+		case 1: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Indfor_SpecterSFlora.sqf";
+		};
+		case 2: {
+			call compile preprocessfilelinenumbers "scripts\loadout\Indfor_MSVEMR.sqf";
+		};
+
+	};
+};
+
+returnOutfit = {
+	call compile preprocessfilelinenumbers "scripts\loadout\2mrb_default.sqf";
 };

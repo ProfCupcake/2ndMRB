@@ -153,7 +153,7 @@ returnScript = {
 		_returnee removeAction _x;
 	} forEach playerActions;
 	
-	playerActions = [];
+	playerActions = []; // For new possible actions to be added.
 
 	deleteMarker '2mrb_blue_text';
 	deleteMarker '2mrb_red_text';
@@ -170,4 +170,15 @@ loadoutBoxesSetup =
 	BLUbox addAction ["<t color='#0080ff'>Rifleman</t>", "loadouts\blufor\rifleman.sqf"];
 	OPbox addAction ["<t color='#ff0000'>Rifleman</t>", "loadouts\opfor\rifleman.sqf"];
 	INDbox addAction ["<t color='#00ff00'>Rifleman</t>", "loadouts\indfor\rifleman.sqf"];
+	
+	FnfBox addAction[format ["<t color='#0080ff'>FnF MARPAT WD</t>", actionColour], "loadouts\fnf\MARPATWD.sqf"];
+	FnfBox addAction[format ["<t color='#0080ff'>FnF OCP</t>", actionColour], "loadouts\fnf\OCP.sqf"];
+	FnfBox addAction[format ["<t color='#0080ff'>FnF MARPAT D</t>", actionColour], "loadouts\fnf\MARPATD.sqf"];
+	
+	FnfBox addAction[format ["<t color='#ff0000'>FnF TTsKO Forest</t>", actionColour], "loadouts\fnf\TTsKOForest.sqf"];
+	FnfBox addAction[format ["<t color='#ff0000'>FnF VDV Flora</t>", actionColour], "loadouts\fnf\VDVFlora.sqf"];
+	FnfBox addAction[format ["<t color='#ff0000'>FnF TTsKO Mountain</t>", actionColour], "loadouts\fnf\TTsKOMountain.sqf"];
+	
+	FnfBox addAction[format ["<t color='#00ff00'>FnF Specter S Flora</t>", actionColour], "loadouts\fnf\SpecterSFlora.sqf"];
+	FnfBox addAction[format ["<t color='#00ff00'>FnF MSV EMR</t>", actionColour], "loadouts\fnf\MSVEMR.sqf"];
 };

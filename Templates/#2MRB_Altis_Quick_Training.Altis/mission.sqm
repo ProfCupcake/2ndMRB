@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1053;
+		nextID=1055;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9167.0205,22.346331,21643.781};
-		dir[]={0.085325979,-0.60334027,0.79290783};
-		up[]={0.064553604,0.79748338,0.59987843};
-		aside[]={0.99426115,4.0250598e-008,-0.10699376};
+		pos[]={9173.0459,24.916592,21654.547};
+		dir[]={-0.17327762,-0.78681618,-0.59239024};
+		up[]={-0.22089273,0.61718583,-0.75517511};
+		aside[]={-0.95979834,-3.4458935e-008,0.28074518};
 	};
 };
 binarizationWanted=0;
@@ -50,13 +50,15 @@ addons[]=
 	"CUP_CWA_Misc",
 	"A3_Characters_F",
 	"A3_Supplies_F_Exp_Ammoboxes",
-	"ace_dragging"
+	"ace_dragging",
+	"A3_Weapons_F_Bootcamp_Ammoboxes",
+	"ace_chemlights"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=27;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -224,6 +226,20 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item25
+		{
+			className="A3_Weapons_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item26
+		{
+			className="ace_chemlights";
+			name="ace_chemlights";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 randomSeed=8854946;
@@ -387,7 +403,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=107;
+		items=108;
 		class Item0
 		{
 			dataType="Object";
@@ -3848,6 +3864,7 @@ class Mission
 			};
 			id=1050;
 			type="Box_NATO_Equip_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3966,6 +3983,65 @@ class Mission
 			};
 			id=1052;
 			type="Box_AAF_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item107
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9173.4502,15.781599,21650.748};
+				angles[]={0.0039968039,3.5567017,0.0039968039};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="FnFbox";
+			};
+			id=1054;
+			type="Box_FIA_Ammo_F";
 			class CustomAttributes
 			{
 				class Attribute0

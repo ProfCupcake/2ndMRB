@@ -1,9 +1,9 @@
 
 call compile preprocessfilelinenumbers "scripts\functions.sqf";
 
-missionBoard addAction ["Movement Practice", "scripts\movementServer.sqf"];
-missionBoard addAction ["OutDoor CQC", "scripts\cqcOutServer.sqf"];
-missionBoard addAction ["InDoor CQC", "scripts\cqcInServer.sqf"];
+missionBoard addAction [parseText format ["<t color='%1'>Movement Practice</t>", actionColour], "scripts\movementServer.sqf"];
+missionBoard addAction [parseText format ["<t color='%1'>Outdoor CQC</t>", actionColour], "scripts\cqcOutServer.sqf"];
+missionBoard addAction [parseText format ["<t color='%1'>Indoor CQC</t>", actionColour], "scripts\cqcInServer.sqf"];
 
 playerReturn = 0;
 

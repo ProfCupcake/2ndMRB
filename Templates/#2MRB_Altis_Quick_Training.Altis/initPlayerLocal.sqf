@@ -5,7 +5,8 @@ CUP_arsenalAction = player addAction ["Virtual Arsenal", {["Open",true] spawn BI
 player addEventHandler ["Killed", {player removeAction CUP_arsenalAction;}];
 player addEventHandler ["Respawn", {player addAction ["Virtual Arsenal", {["Open",true] spawn BIS_fnc_arsenal},nil,1.5,true,true,"","player distance thebox <= 20"];}];
 
-returnSign addAction ["RTB", "player call returnScript"];
+actionColour = "#FFFF00";
+returnSign addAction [parseText format ["<t color='%1'>RTB</t>", actionColour], "player call returnScript"];
 {true} call compile preprocessfilelinenumbers "scripts\boardInit.sqf";
 
 if (isNil{CUP_homeBaseSpawn}) then

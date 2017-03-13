@@ -157,15 +157,15 @@ movement = {
 };
 
 blu_Spawn = {
-	teleportSign addAction ['Blufor Spawn','scripts\bluSpawn.sqf'];
+	teleportSign addAction [parseText format ["<t color='%1'>Blufor Spawn</t>", actionColour],'scripts\bluSpawn.sqf'];
 };
 
 op_Spawn = {
-	teleportSign addAction ['Opfor Spawn','scripts\opSpawn.sqf'];
-};
+	teleportSign addAction [parseText format ["<t color='%1'>Opfor Spawn</t>", actionColour],'scripts\opSpawn.sqf'];
+}
 
 ind_Spawn = {
-	teleportSign addAction ['Indfor Spawn','scripts\indSpawn.sqf'];
+	teleportSign addAction [parseText format ["<t color='%1'>Indfor Spawn</t>", actionColour],'scripts\indSpawn.sqf'];
 };
 
 returnScript = {

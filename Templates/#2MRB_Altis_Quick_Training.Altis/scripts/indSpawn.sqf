@@ -10,11 +10,8 @@ _startMarkTwo setMarkerColorLocal "ColorGreen";
 _startMarkTwo setMarkerTypeLocal "hd_dot";
 _startMarkTwo setMarkerTextLocal "Indfor Start";
 
-playerReturn = _spawnee addAction [parseText format ["<t color='%1'>RTB</t>", actionColour], "player call returnScript"];
+playerReturn = _spawnee addAction[format ["<t color='%1'>RTB</t>", actionColour], "player call returnScript"];
 _spawnee addEventHandler ["Killed", "player call returnScript"];
 
-indforCount = indforCount + 1;
-
-playerTeam = 3;
-
-publicVariable "indforCount";
+_sideSwitchGroup = createGroup independent;
+[player] joinSilent _sideSwitchGroup;

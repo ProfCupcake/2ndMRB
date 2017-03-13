@@ -157,15 +157,15 @@ movement = {
 };
 
 blu_Spawn = {
-	teleportSign addAction [parseText format ["<t color='%1'>Blufor Spawn</t>", actionColour],'scripts\bluSpawn.sqf'];
+	teleportSign addAction[format ["<t color='%1'>Blufor Spawn</t>", actionColour],'scripts\bluSpawn.sqf'];
 };
 
 op_Spawn = {
-	teleportSign addAction [parseText format ["<t color='%1'>Opfor Spawn</t>", actionColour],'scripts\opSpawn.sqf'];
-}
+	teleportSign addAction[format ["<t color='%1'>Opfor Spawn</t>", actionColour],'scripts\opSpawn.sqf'];
+};
 
 ind_Spawn = {
-	teleportSign addAction [parseText format ["<t color='%1'>Indfor Spawn</t>", actionColour],'scripts\indSpawn.sqf'];
+	teleportSign addAction[format ["<t color='%1'>Indfor Spawn</t>", actionColour],'scripts\indSpawn.sqf'];
 };
 
 returnScript = {
@@ -178,23 +178,8 @@ returnScript = {
 	deleteMarker '2mrb_red_text';
 	deleteMarker '2mrb_green_text';
 
-	[_returnee] join original;
-
-	switch (playerTeam) do {
-		case 1: {
-			bluforCount = bluforCount - 1;
-			publicVariable "bluforCount";
-		};
-		case 2: {
-			opforCount = opforCount - 1;
-			publicVariable "opforCount";
-		};
-		case 3: {
-			indforCount = indforCount - 1;
-			publicVariable "indforCount";
-		};
-	};
+	_sideSwitchGroup = createGroup civilian;
+	[player] joinSilent _sideSwitchGroup;
 	
-	playerTeam = 0;
-	"Remaining:\nBlufor: " + str bluforCount + "\nOpfor: " + str opforCount + "\nIndfor: " + str indforCount call print_text;
+	format ["Active:-\n\nBLUFOR: %1\nOPFOR: %2\nINDFOR: %1", {side _x == west} count allPlayers, {side _x == east} count allPlayers, {side _x == independent} count allPlayers] call print_text;
 };

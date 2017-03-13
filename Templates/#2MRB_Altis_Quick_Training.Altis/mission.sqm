@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1054;
+		nextID=1055;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9166.5586,19.497557,21648.977};
-		dir[]={-0.074487455,-0.64624614,0.75950241};
-		up[]={-0.063078351,0.76312685,0.64316648};
-		aside[]={0.9952383,3.0640513e-007,0.097607896};
+		pos[]={9173.0459,24.916592,21654.547};
+		dir[]={-0.17327762,-0.78681618,-0.59239024};
+		up[]={-0.22089273,0.61718583,-0.75517511};
+		aside[]={-0.95979834,-3.4458935e-008,0.28074518};
 	};
 };
 binarizationWanted=0;
@@ -50,13 +50,15 @@ addons[]=
 	"CUP_CWA_Misc",
 	"A3_Characters_F",
 	"A3_Supplies_F_Exp_Ammoboxes",
-	"ace_dragging"
+	"ace_dragging",
+	"A3_Weapons_F_Bootcamp_Ammoboxes",
+	"ace_chemlights"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=27;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -221,6 +223,20 @@ class AddonsMetaData
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item25
+		{
+			className="A3_Weapons_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item26
+		{
+			className="ace_chemlights";
+			name="ace_chemlights";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -4015,8 +4031,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9173.2354,14.802925,21650.389};
-				angles[]={0.0039967569,3.556704,0.0039967569};
+				position[]={9173.4502,15.781599,21650.748};
+				angles[]={0.0039968039,3.5567017,0.0039968039};
 			};
 			side="Empty";
 			flags=4;
@@ -4024,12 +4040,30 @@ class Mission
 			{
 				name="FnFbox";
 			};
-			id=1053;
-			type="Box_NATO_Equip_F";
-			atlOffset=1.1444092e-005;
+			id=1054;
+			type="Box_FIA_Ammo_F";
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
@@ -4048,7 +4082,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 	};

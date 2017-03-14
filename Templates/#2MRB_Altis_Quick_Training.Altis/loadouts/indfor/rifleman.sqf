@@ -1,30 +1,28 @@
-comment "Exported from Arsenal by SSgt Cupcake";
-
 comment "Remove existing items";
-removeAllWeapons this;
-removeAllItems this;
-removeAllAssignedItems this;
-removeUniform this;
-removeVest this;
-removeBackpack this;
-removeHeadgear this;
+removeAllWeapons player;
+removeAllItems player;
+removeAllAssignedItems player;
+removeUniform player;
+removeVest player;
+removeBackpack player;
+removeHeadgear player;
 
 comment "Add containers";
-this forceAddUniform "rhsgref_uniform_reed";
-for "_i" from 1 to 4 do {this addItemToUniform "rhs_30Rnd_545x39_AK";};
-this addVest "V_HarnessO_gry";
-for "_i" from 1 to 10 do {this addItemToVest "ACE_fieldDressing";};
-for "_i" from 1 to 3 do {this addItemToVest "ACE_morphine";};
-this addItemToVest "ACE_EarPlugs";
-for "_i" from 1 to 4 do {this addItemToVest "rhs_30Rnd_545x39_AK";};
-for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
-for "_i" from 1 to 4 do {this addItemToVest "SmokeShell";};
+player forceAddUniform "rhsgref_uniform_reed";
+for "_i" from 1 to 4 do {player addItemToUniform "rhs_30Rnd_545x39_AK";};
+player addVest "V_HarnessO_gry";
+for "_i" from 1 to 10 do {player addItemToVest "ACE_fieldDressing";};
+for "_i" from 1 to 3 do {player addItemToVest "ACE_morphine";};
+player addItemToVest "ACE_EarPlugs";
+for "_i" from 1 to 4 do {player addItemToVest "rhs_30Rnd_545x39_AK";};
+for "_i" from 1 to 2 do {player addItemToVest "HandGrenade";};
+for "_i" from 1 to 4 do {player addItemToVest "SmokeShell";};
 
 comment "Add weapons";
-this addWeapon "rhs_weap_ak74";
+player addWeapon "rhs_weap_ak74";
 
 comment "Add items";
-this linkItem "ItemMap";
-this linkItem "ItemCompass";
-this linkItem "ItemWatch";
-this linkItem "ItemGPS";
+player linkItem "ItemMap";
+player linkItem "ItemCompass";
+player linkItem "ItemWatch";
+player linkItem "ItemGPS";

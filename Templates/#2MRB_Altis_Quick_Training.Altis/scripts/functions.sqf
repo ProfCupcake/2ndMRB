@@ -168,8 +168,12 @@ returnScript = {
 loadoutBoxesSetup = 
 {
 	BLUbox addAction ["<t color='#0080ff'>Rifleman</t>", "loadouts\blufor\rifleman.sqf"];
+	BLUbox addAction ["<t color='#0080ff'>Rifleman (M4A1)</t>", "loadouts\blufor\rifleman_m4a1.sqf"];
+	
 	OPbox addAction ["<t color='#ff0000'>Rifleman</t>", "loadouts\opfor\rifleman.sqf"];
+	
 	INDbox addAction ["<t color='#00ff00'>Rifleman</t>", "loadouts\indfor\rifleman.sqf"];
+	
 	
 	FnfBox addAction[format ["<t color='#0080ff'>FnF MARPAT WD</t>", actionColour], "loadouts\fnf\MARPATWD.sqf"];
 	FnfBox addAction[format ["<t color='#0080ff'>FnF OCP</t>", actionColour], "loadouts\fnf\OCP.sqf"];

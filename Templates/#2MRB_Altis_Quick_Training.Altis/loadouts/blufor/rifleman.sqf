@@ -1,5 +1,3 @@
-player = _player select 1;
-
 comment "Remove existing items";
 removeAllWeapons player;
 removeAllItems player;

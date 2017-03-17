@@ -166,29 +166,33 @@ returnScript = {
 };
 
 loadoutBoxesSetup = 
-{	
-	BLUbox addAction ["<t color='#0080ff'>Rifleman</t>", "loadouts\blufor\rifleman.sqf"];
-	BLUbox addAction ["<t color='#0080ff'>Rifleman (M4A1)</t>", "loadouts\blufor\rifleman_m4a1.sqf"];
-	BLUbox addAction ["<t color='#0080ff'>Autorifleman</t>", "loadouts\blufor\autorifleman.sqf"];
-	BLUbox addAction ["<t color='#0080ff'>Pistoleer</t>", "loadouts\blufor\pisoleer.sqf"];
+{
+	BLUactionColour = "#00a0ff";
+	OPactionColour = "#ff0000";
+	INDactionColour = "#00ff00";
 	
-	OPbox addAction ["<t color='#ff0000'>Rifleman</t>", "loadouts\opfor\rifleman.sqf"];
-	OPbox addAction ["<t color='#ff0000'>Autorifleman</t>", "loadouts\opfor\autorifleman.sqf"];
-	OPbox addAction ["<t color='#ff0000'>Pistoleer</t>", "loadouts\opfor\pistoleer.sqf"];
+	BLUbox addAction [format ["<t color='%1'>Rifleman</t>", BLUactionColour], "loadouts\blufor\rifleman.sqf"];
+	BLUbox addAction [format ["<t color='%1'>Rifleman (M4A1)</t>", BLUactionColour], "loadouts\blufor\rifleman_m4a1.sqf"];
+	BLUbox addAction [format ["<t color='%1'>Autorifleman</t>", BLUactionColour], "loadouts\blufor\autorifleman.sqf"];
+	BLUbox addAction [format ["<t color='%1'>Pistoleer</t>", BLUactionColour], "loadouts\blufor\pistoleer.sqf"];
 	
-	INDbox addAction ["<t color='#00ff00'>Rifleman</t>", "loadouts\indfor\rifleman.sqf"];
-	INDbox addAction ["<t color='#00ff00'>Autorifleman</t>", "loadouts\indfor\autorifleman.sqf"];
-	INDbox addAction ["<t color='#00ff00'>Pistoleer</t>", "loadouts\indfor\pistoleer.sqf"];
+	OPbox addAction [format ["<t color='%1'>Rifleman</t>", OPactionColour], "loadouts\opfor\rifleman.sqf"];
+	OPbox addAction [format ["<t color='%1'>Autorifleman</t>", OPactionColour], "loadouts\opfor\autorifleman.sqf"];
+	OPbox addAction [format ["<t color='%1'>Pistoleer</t>", OPactionColour], "loadouts\opfor\pistoleer.sqf"];
+	
+	INDbox addAction [format ["<t color='%1'>Rifleman</t>", INDactionColour], "loadouts\indfor\rifleman.sqf"];
+	INDbox addAction [format ["<t color='%1'>Autorifleman</t>", INDactionColour], "loadouts\indfor\autorifleman.sqf"];
+	INDbox addAction [format ["<t color='%1'>Pistoleer</t>", INDactionColour], "loadouts\indfor\pistoleer.sqf"];
 	
 	
-	FnfBox addAction[format ["<t color='#0080ff'>FnF MARPAT WD</t>", actionColour], "loadouts\fnf\MARPATWD.sqf"];
-	FnfBox addAction[format ["<t color='#0080ff'>FnF OCP</t>", actionColour], "loadouts\fnf\OCP.sqf"];
-	FnfBox addAction[format ["<t color='#0080ff'>FnF MARPAT D</t>", actionColour], "loadouts\fnf\MARPATD.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF MARPAT WD</t>", BLUactionColour], "loadouts\fnf\MARPATWD.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF OCP</t>", BLUactionColour], "loadouts\fnf\OCP.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF MARPAT D</t>", BLUactionColour], "loadouts\fnf\MARPATD.sqf"];
 	
-	FnfBox addAction[format ["<t color='#ff0000'>FnF TTsKO Forest</t>", actionColour], "loadouts\fnf\TTsKOForest.sqf"];
-	FnfBox addAction[format ["<t color='#ff0000'>FnF VDV Flora</t>", actionColour], "loadouts\fnf\VDVFlora.sqf"];
-	FnfBox addAction[format ["<t color='#ff0000'>FnF TTsKO Mountain</t>", actionColour], "loadouts\fnf\TTsKOMountain.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF TTsKO Forest</t>", OPactionColour], "loadouts\fnf\TTsKOForest.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF VDV Flora</t>", OPactionColour], "loadouts\fnf\VDVFlora.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF TTsKO Mountain</t>", OPactionColour], "loadouts\fnf\TTsKOMountain.sqf"];
 	
-	FnfBox addAction[format ["<t color='#00ff00'>FnF Specter S Flora</t>", actionColour], "loadouts\fnf\SpecterSFlora.sqf"];
-	FnfBox addAction[format ["<t color='#00ff00'>FnF MSV EMR</t>", actionColour], "loadouts\fnf\MSVEMR.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF Specter S Flora</t>", INDactionColour], "loadouts\fnf\SpecterSFlora.sqf"];
+	FnfBox addAction[format ["<t color='%1'>FnF MSV EMR</t>", INDactionColour], "loadouts\fnf\MSVEMR.sqf"];
 };

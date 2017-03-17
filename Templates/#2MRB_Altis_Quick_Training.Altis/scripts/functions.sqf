@@ -166,16 +166,19 @@ returnScript = {
 };
 
 loadoutBoxesSetup = 
-{
+{	
 	BLUbox addAction ["<t color='#0080ff'>Rifleman</t>", "loadouts\blufor\rifleman.sqf"];
 	BLUbox addAction ["<t color='#0080ff'>Rifleman (M4A1)</t>", "loadouts\blufor\rifleman_m4a1.sqf"];
 	BLUbox addAction ["<t color='#0080ff'>Autorifleman</t>", "loadouts\blufor\autorifleman.sqf"];
+	BLUbox addAction ["<t color='#0080ff'>Pistoleer</t>", "loadouts\blufor\pisoleer.sqf"];
 	
 	OPbox addAction ["<t color='#ff0000'>Rifleman</t>", "loadouts\opfor\rifleman.sqf"];
 	OPbox addAction ["<t color='#ff0000'>Autorifleman</t>", "loadouts\opfor\autorifleman.sqf"];
+	OPbox addAction ["<t color='#ff0000'>Pistoleer</t>", "loadouts\opfor\pistoleer.sqf"];
 	
 	INDbox addAction ["<t color='#00ff00'>Rifleman</t>", "loadouts\indfor\rifleman.sqf"];
 	INDbox addAction ["<t color='#00ff00'>Autorifleman</t>", "loadouts\indfor\autorifleman.sqf"];
+	INDbox addAction ["<t color='#00ff00'>Pistoleer</t>", "loadouts\indfor\pistoleer.sqf"];
 	
 	
 	FnfBox addAction[format ["<t color='#0080ff'>FnF MARPAT WD</t>", actionColour], "loadouts\fnf\MARPATWD.sqf"];

@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=10.953848;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9173.0459,24.916592,21654.547};
-		dir[]={-0.15624909,-0.81068325,-0.5642789};
-		up[]={-0.21633798,0.58548486,-0.78128552};
-		aside[]={-0.96375108,-7.9046004e-008,0.26686168};
+		pos[]={9219.6338,93.565041,21531.852};
+		dir[]={-0.43982595,-0.59872353,0.66941762};
+		up[]={-0.32877159,0.80095065,0.5003919};
+		aside[]={0.83576459,2.917368e-007,0.54912198};
 	};
 };
 binarizationWanted=0;
@@ -64,7 +64,7 @@ class AddonsMetaData
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
@@ -81,7 +81,7 @@ class AddonsMetaData
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
@@ -95,7 +95,7 @@ class AddonsMetaData
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item6
 		{
@@ -151,7 +151,7 @@ class AddonsMetaData
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item14
 		{
@@ -198,7 +198,7 @@ class AddonsMetaData
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item21
 		{
@@ -210,14 +210,14 @@ class AddonsMetaData
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item23
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item24
 		{
@@ -231,7 +231,7 @@ class AddonsMetaData
 			className="A3_Weapons_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Weapons and Accessories";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item26
 		{
@@ -419,7 +419,7 @@ class Mission
 			};
 			id=1;
 			type="Land_Sleeping_bag_F";
-			atlOffset=0.37770462;
+			atlOffset=0.043231964;
 		};
 		class Item1
 		{
@@ -436,7 +436,7 @@ class Mission
 			};
 			id=2;
 			type="Land_Sleeping_bag_blue_F";
-			atlOffset=0.33092499;
+			atlOffset=0.036064148;
 		};
 		class Item2
 		{
@@ -447,13 +447,14 @@ class Mission
 				angles[]={0,4.2272921,6.2818937};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=3;
 			type="Land_Sleeping_bag_F";
-			atlOffset=0.34294128;
+			atlOffset=0.0079851151;
 		};
 		class Item3
 		{
@@ -464,13 +465,14 @@ class Mission
 				angles[]={0,4.1975694,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=4;
 			type="Land_Sleeping_bag_brown_F";
-			atlOffset=0.34349346;
+			atlOffset=0.013544083;
 		};
 		class Item4
 		{
@@ -481,13 +483,14 @@ class Mission
 				angles[]={0,0.78768802,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=5;
 			type="Land_Sleeping_bag_blue_F";
-			atlOffset=0.34340191;
+			atlOffset=0.018393517;
 		};
 		class Item5
 		{
@@ -504,7 +507,7 @@ class Mission
 			};
 			id=6;
 			type="Land_Sleeping_bag_F";
-			atlOffset=0.2881155;
+			atlOffset=0.026959419;
 		};
 		class Item6
 		{
@@ -515,13 +518,14 @@ class Mission
 				angles[]={0,4.1334276,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=7;
 			type="Land_Sleeping_bag_blue_F";
-			atlOffset=0.26120377;
+			atlOffset=0.024299622;
 		};
 		class Item7
 		{
@@ -532,13 +536,14 @@ class Mission
 				angles[]={0,0.89234805,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=8;
 			type="Land_Sleeping_bag_F";
-			atlOffset=0.20153236;
+			atlOffset=0.024616241;
 		};
 		class Item8
 		{
@@ -549,13 +554,14 @@ class Mission
 				angles[]={0,1.0735799,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=9;
 			type="Land_Sleeping_bag_brown_F";
-			atlOffset=0.24866486;
+			atlOffset=0.015668869;
 		};
 		class Item9
 		{
@@ -566,13 +572,14 @@ class Mission
 				angles[]={0,4.2306957,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=10;
 			type="Land_Sleeping_bag_blue_F";
-			atlOffset=0.28680897;
+			atlOffset=0.012519836;
 		};
 		class Item10
 		{
@@ -589,7 +596,7 @@ class Mission
 			};
 			id=11;
 			type="Land_Sleeping_bag_F";
-			atlOffset=0.1704216;
+			atlOffset=0.031105995;
 		};
 		class Item11
 		{
@@ -600,13 +607,14 @@ class Mission
 				angles[]={0,1.0735799,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=12;
 			type="Land_Ground_sheet_F";
-			atlOffset=0.2280674;
+			atlOffset=0.011345863;
 		};
 		class Item12
 		{
@@ -617,13 +625,14 @@ class Mission
 				angles[]={0,0.96660525,6.2819896};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=13;
 			type="Land_Sleeping_bag_blue_folded_F";
-			atlOffset=0.13690472;
+			atlOffset=0.013854027;
 		};
 		class Item13
 		{
@@ -634,13 +643,14 @@ class Mission
 				angles[]={0,1.0735799,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=14;
 			type="Land_Sleeping_bag_brown_F";
-			atlOffset=0.24569988;
+			atlOffset=0.022293091;
 		};
 		class Item14
 		{

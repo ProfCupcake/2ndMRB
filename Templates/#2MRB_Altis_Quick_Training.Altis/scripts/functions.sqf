@@ -1,15 +1,8 @@
-training_init = 
-{
-	removeAllActions teleportSign;
-};
-
 print_text = {
 	_this remoteExec ["hint", 0];
 };
 
 cqcOut = {
-
-	call training_init;
 	
 	if (isServer) then {
 
@@ -38,18 +31,12 @@ cqcOut = {
 		publicVariable "iSpawn";
 	};
 
-	blu_Spawn remoteExec ["call",0];
-	op_Spawn remoteExec ["call",0];
-	ind_Spawn remoteExec ["call",0];
-
 	//("B:" + str _bPosition + " O:" + str _oPosition + " I:" + str _iPosition) remoteExec ["hint", 0];
 
 	"Outdoor CQC Processing Complete. Please proceed to Signboard to teleport yourself to your respective starting points" call print_text;
 };
 
 cqcIn = {
-
-	call training_init;
 	
 	if (isServer) then {
 
@@ -80,10 +67,6 @@ cqcIn = {
 		publicVariable "iSpawn";
 
 	};
-	
-	blu_Spawn remoteExec ["call",0];
-	op_Spawn remoteExec ["call",0];
-	ind_Spawn remoteExec ["call",0];
 
 	//("B:" + str bSpawn + "\nO:" + str oSpawn + "\nI:" + str iSpawn) remoteExec ["hint", 0];
 	"Indoor CQC Processing Complete. Please proceed to Signboard to teleport yourself to your respective starting points" call print_text;
@@ -91,8 +74,6 @@ cqcIn = {
 };
 
 movement = {
-
-	call training_init;
 	
 	if (isServer) then {		
 
@@ -122,26 +103,10 @@ movement = {
 		publicVariable "iSpawn";
 
 	};
-	
-	blu_Spawn remoteExec ["call",0];
-	op_Spawn remoteExec ["call",0];
-	ind_Spawn remoteExec ["call",0];
 
 	//("B:" + str _bPosition + " O:" + str _oPosition + " I:" + str _iPosition) remoteExec ["hint", 0];
 
 	"Movement Practice Processing Complete. Please proceed to Signboard to teleport yourself to your respective starting points. \nMission is to travel to the opposite side of the square you are indicated on the map." call print_text;
-};
-
-blu_Spawn = {
-	teleportSign addAction[format ["<t color='%1'>Blufor Spawn</t>", actionColour],'scripts\bluSpawn.sqf'];
-};
-
-op_Spawn = {
-	teleportSign addAction[format ["<t color='%1'>Opfor Spawn</t>", actionColour],'scripts\opSpawn.sqf'];
-};
-
-ind_Spawn = {
-	teleportSign addAction[format ["<t color='%1'>Indfor Spawn</t>", actionColour],'scripts\indSpawn.sqf'];
 };
 
 returnScript = {

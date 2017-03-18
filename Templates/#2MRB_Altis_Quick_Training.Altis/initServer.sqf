@@ -2,6 +2,10 @@ veh = createVehicle ["C_Heli_Light_01_civil_F",position cupcakes_secret_littlebi
 [veh,["wasp",1],["AddCargoHook_COver",0]] call BIS_fnc_initVehicle;
 veh lock 2;
 
+missionRunning = false;
+
+publicVariable "missionRunning";
+
 /*veh addEventHandler ["Hit", {
   _veh = _this select 0;
   _culprit = _this select 1;

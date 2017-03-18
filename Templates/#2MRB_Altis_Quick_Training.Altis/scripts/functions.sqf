@@ -29,6 +29,9 @@ cqcOut = {
 		publicVariable "bSpawn";
 		publicVariable "oSpawn";
 		publicVariable "iSpawn";
+		
+		missionRunning = true;
+		publicVariable "missionRunning";
 	};
 
 	//("B:" + str _bPosition + " O:" + str _oPosition + " I:" + str _iPosition) remoteExec ["hint", 0];
@@ -65,7 +68,9 @@ cqcIn = {
 		publicVariable "bSpawn";
 		publicVariable "oSpawn";
 		publicVariable "iSpawn";
-
+		
+		missionRunning = true;
+		publicVariable "missionRunning";
 	};
 
 	//("B:" + str bSpawn + "\nO:" + str oSpawn + "\nI:" + str iSpawn) remoteExec ["hint", 0];
@@ -102,6 +107,8 @@ movement = {
 		publicVariable "oSpawn";
 		publicVariable "iSpawn";
 
+		missionRunning = true;
+		publicVariable "missionRunning";
 	};
 
 	//("B:" + str _bPosition + " O:" + str _oPosition + " I:" + str _iPosition) remoteExec ["hint", 0];

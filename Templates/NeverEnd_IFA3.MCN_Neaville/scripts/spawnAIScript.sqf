@@ -10,7 +10,7 @@
 	_strMsg = str bluTactic + " : " + str opTactic;
 	hint _strMsg;
 	
-	if (_bluCount <= 50) then {
+	if (_bluCount <= 30) then {
 		routes = [];
 		switch (bluTactic) do {
 			case 0: {
@@ -51,7 +51,7 @@
 		// Create Spawn per route in routes
 	};
 	
-	if (_opCount <= 50) then {
+	if (_opCount <= 30) then {
 		routes = [];
 		switch (opTactic) do {
 			case 0: {

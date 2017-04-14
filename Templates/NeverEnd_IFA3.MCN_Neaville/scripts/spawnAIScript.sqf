@@ -10,7 +10,7 @@
 	//_strMsg = str bluTactic + " : " + str opTactic;
 	//debugLog _strMsg;
 	
-	if (_bluCount <= 30) then {
+	if (_bluCount <= 50) then {
 		routes = [];
 		switch (bluTactic) do {
 			case 0: {
@@ -50,7 +50,7 @@
 		} foreach routes;
 	};
 	
-	if (_opCount <= 30) then {
+	if (_opCount <= 50) then {
 		routes = [];
 		switch (opTactic) do {
 			case 0: {

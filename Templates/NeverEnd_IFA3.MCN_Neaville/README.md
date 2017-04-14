@@ -32,6 +32,7 @@ Just a never-ending mission that spawns units across various routes to attack Ne
 * Loadouts -> More specific to Magazine Count and Items on Unit
 * More Routes for AI to move for better unexpected encounters.
 * Dynamic Starting Areas
+* Show Control Status of Town
 * Maybe a third side.....
 	
 

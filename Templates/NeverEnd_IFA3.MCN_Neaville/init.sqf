@@ -2,6 +2,8 @@ if (isServer) then {
 	//Initialize Spawning System
 	spawnStatus = false;
 	tacticStatus = false;
+	townStatus = false;
+	townSide = "NIL";
 	
 	_blueSide = 0;
 	_redSide = 1;
@@ -24,6 +26,8 @@ if (isServer) then {
 	//Pushing Public Variables
 	publicVariable "spawnStatus";
 	publicVariable "tacticStatus";
+	publicVariable "townStatus";
+	publicVariable "townSide";
 	publicVariable "bluTactic";
 	publicVariable "opTactic";
 	publicVariable "bluUnits";

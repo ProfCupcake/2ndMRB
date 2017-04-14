@@ -7,8 +7,8 @@
 	_opCount = {(side _x == EAST) && (count units _x != 0)} count allGroups;
 	
 	//Debugging Tactical Selection Status
-	_strMsg = str bluTactic + " : " + str opTactic;
-	hint _strMsg;
+	//_strMsg = str bluTactic + " : " + str opTactic;
+	//debugLog _strMsg;
 	
 	if (_bluCount <= 30) then {
 		routes = [];

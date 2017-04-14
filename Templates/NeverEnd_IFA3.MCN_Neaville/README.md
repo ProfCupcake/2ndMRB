@@ -14,6 +14,7 @@ Just a never-ending mission that spawns units across various routes to attack Ne
 * 20 sec Respawn
 * 3 Loadouts Each
 * Purely Infantry as of now
+* Show Control Status of Town (Rough but Simple)
 * 5 non-armed vehicles with respawn on each side for faster movement.
 
 ## Current Settings
@@ -32,7 +33,6 @@ Just a never-ending mission that spawns units across various routes to attack Ne
 * Loadouts -> More specific to Magazine Count and Items on Unit
 * More Routes for AI to move for better unexpected encounters.
 * Dynamic Starting Areas
-* Show Control Status of Town
 * Maybe a third side.....
 	
 

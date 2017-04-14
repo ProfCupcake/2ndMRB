@@ -2,9 +2,11 @@
 	_bluCount = 0;
 	_opCount = 0;
 	
+	//Just to keep track exisiting group for each side
 	_bluCount = {(side _x == WEST) && (count units _x != 0)} count allGroups;
 	_opCount = {(side _x == EAST) && (count units _x != 0)} count allGroups;
 	
+	//Debugging Tactical Selection Status
 	_strMsg = str bluTactic + " : " + str opTactic;
 	hint _strMsg;
 	
@@ -46,6 +48,7 @@
 			["blu_Start", WEST, bluUnits, _x] call compile preprocessfilelinenumbers "scripts\spawnAI.sqf"; 
 		
 		} foreach routes;
+		// Create Spawn per route in routes
 	};
 	
 	if (_opCount <= 50) then {

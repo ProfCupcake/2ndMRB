@@ -21,6 +21,7 @@ if (isServer) then {
 	bluUnits = unitSets select _blueSide;
 	opUnits = unitSets select _redSide;
 	
+	//Pushing Public Variables
 	publicVariable "spawnStatus";
 	publicVariable "tacticStatus";
 	publicVariable "bluTactic";
@@ -28,6 +29,7 @@ if (isServer) then {
 	publicVariable "bluUnits";
 	publicVariable "opUnits";
 	
+	//Adding Respawn Inventory according to selected Side Choice in Parameters
 	switch (_blueSide) do {
 		case 0: {
 			[WEST, "US1"] call BIS_fnc_addRespawnInventory;
@@ -64,8 +66,10 @@ if (isServer) then {
 		};
 	};
 	
+	//Spawning 15 groups of units for the initial start
 	//Initial Spawn of 5 groups to attack Neavile
 	for "_i" from 1 to 5 do {{true} call compile preprocessfilelinenumbers "scripts\spawnAIscript.sqf";};
 };
 
+//Creating Task Record for Viewing
 player createDiaryRecord ["Diary", ["Take and Hold Neavile", "You are to capture Neavile and hold the area as long as you can."]];

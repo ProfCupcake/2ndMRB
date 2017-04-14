@@ -1,10 +1,13 @@
 
+//Initializing Tactics Choice
 _tactics = [0,1,2,3,4,5,6];
 
+//Randomizing Sides to Use different Choice
 bluTactic = selectRandom _tactics;
 
 opTactic = selectRandom _tactics;
 
+//Published Variables.
 publicVariable "bluTactic";
 publicVariable "opTactic";
 

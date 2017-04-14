@@ -1,0 +1,355 @@
+onLoadMission = "The Neverending Fight for Neaville";
+onLoadIntro = "NeverEND!";
+onLoadName = "NeverEND IFA3"
+respawn = 3;
+respawnOnStart = 1;
+respawnDelay = 15;
+respawnTemplates[] = {"Counter","MenuPosition","MenuInventory"};
+
+class Params {
+	
+    class blufor_SideChoice {
+        title = "Blufor Side";
+        values[] = {0,1,2};
+        texts[] = {"USA","Germany","Russia"};
+        default = 0;
+    };
+	
+	class opfor_SideChoice {
+        title = "Opfor Side";
+        values[] = {0,1,2};
+        texts[] = {"USA","Germany","Russia"};
+        default = 1;
+    };
+};
+
+class CfgRespawnInventory
+{
+	class US1
+	{
+		displayName = "M1 Garand"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_M1_Garand"
+		};
+		magazines[] = {
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_8Rnd_762x63",
+			"LIB_US_Mk_2",
+			"LIB_US_Mk_2"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_US_Vest_Garand",
+			"H_LIB_US_Helmet_Net_os",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_US_Rangers_Uniform";
+		backpack = "B_LIB_US_Backpack_dday";
+	};
+	class US2
+	{
+		displayName = "MG"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_M1918A2_BAR"
+		};
+		magazines[] = {
+			"LIB_20Rnd_762x63",
+			"LIB_20Rnd_762x63",
+			"LIB_20Rnd_762x63",
+			"LIB_20Rnd_762x63",
+			"LIB_20Rnd_762x63",
+			"LIB_20Rnd_762x63",
+			"LIB_20Rnd_762x63",
+			"LIB_20Rnd_762x63",
+			"LIB_US_Mk_2",
+			"LIB_US_Mk_2"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_US_Vest_Bar",
+			"H_LIB_US_Helmet_Net_os",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_US_Rangers_Uniform";
+		backpack = "B_LIB_US_Backpack_dday";
+	};
+	class US3
+	{
+		displayName = "Thompson"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_M1A1_Thompson"
+		};
+		magazines[] = {
+			"LIB_30Rnd_45ACP",
+			"LIB_30Rnd_45ACP",
+			"LIB_30Rnd_45ACP",
+			"LIB_30Rnd_45ACP",
+			"LIB_30Rnd_45ACP",
+			"LIB_30Rnd_45ACP",
+			"LIB_30Rnd_45ACP",
+			"LIB_30Rnd_45ACP",
+			"LIB_US_Mk_2",
+			"LIB_US_Mk_2"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_US_Vest_Thompson",
+			"H_LIB_US_Helmet_Net_os",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_US_Rangers_Uniform";
+		backpack = "B_LIB_US_Backpack_dday";
+	};
+	
+	class GERMAN1
+	{
+		displayName = "MP40"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_MP40"
+		};
+		magazines[] = {
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_32Rnd_9x19",
+			"LIB_nb39",
+			"LIB_nb39",
+			"LIB_m39",
+			"LIB_m39"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_GER_VestMP40",
+			"H_LIB_GER_HelmetCamo",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_GER_Soldier_camo";
+		backpack = "B_LIB_GER_A_frame";
+	};
+	class GERMAN2
+	{
+		displayName = "G43"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_G43"
+		};
+		magazines[] = {
+			"LIB_10Rnd_792x57",
+			"LIB_10Rnd_792x57",
+			"LIB_10Rnd_792x57",
+			"LIB_10Rnd_792x57",
+			"LIB_10Rnd_792x57",
+			"LIB_5Rnd_792x57",
+			"LIB_5Rnd_792x57",
+			"LIB_5Rnd_792x57",
+			"LIB_5Rnd_792x57",
+			"LIB_nb39",
+			"LIB_nb39",
+			"LIB_m39",
+			"LIB_m39"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_GER_VestG43",
+			"H_LIB_GER_HelmetCamo",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_GER_Soldier_camo";
+		backpack = "B_LIB_GER_A_frame";
+	};
+	class GERMAN3
+	{
+		displayName = "MG"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_MG42"
+		};
+		magazines[] = {
+			"LIB_50Rnd_792x57",
+			"LIB_50Rnd_792x57",
+			"LIB_50Rnd_792x57",
+			"LIB_50Rnd_792x57",
+			"LIB_nb39",
+			"LIB_nb39",
+			"LIB_m39",
+			"LIB_m39"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_GER_VestMG",
+			"H_LIB_GER_HelmetCamo",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_GER_Soldier_camo";
+		backpack = "B_LIB_GER_A_frame";
+	};
+	
+	class RUSSIA1
+	{
+		displayName = "M9130"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_M9130"
+		};
+		magazines[] = {
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_5Rnd_762x54",
+			"LIB_rg42",
+			"LIB_rg42"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_SOV_RA_MosinBelt",
+			"H_LIB_SOV_RA_Helmet",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_SOV_Strelok_summer";
+		backpack = "B_LIB_SOV_RA_GasBag";
+	};
+	
+	class RUSSIA2
+	{
+		displayName = "PPsh 41"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_PPSh41_d"
+		};
+		magazines[] = {
+			"LIB_71Rnd_762x25",
+			"LIB_71Rnd_762x25",
+			"LIB_71Rnd_762x25",
+			"LIB_71Rnd_762x25",
+			"LIB_71Rnd_762x25",
+			"LIB_71Rnd_762x25",
+			"LIB_rg42",
+			"LIB_rg42",
+			"LIB_RDG",
+			"LIB_RDG"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_SOV_RA_PPShBelt",
+			"H_LIB_SOV_RA_Helmet",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_SOV_Strelok_summer";
+		backpack = "B_LIB_SOV_RA_GasBag";
+	};
+	
+	class RUSSIA3
+	{
+		displayName = "MG"; // Name visible in the menu
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LIB_DP28"
+		};
+		magazines[] = {
+			"LIB_47Rnd_762x54",
+			"LIB_47Rnd_762x54",
+			"LIB_47Rnd_762x54",
+			"LIB_47Rnd_762x54",
+			"LIB_47Rnd_762x54",
+			"LIB_47Rnd_762x54"
+		};
+		items[] = {
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_LIB_SOV_RA_MGBelt",
+			"H_LIB_SOV_RA_Helmet",
+			"tf_microdagr",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		uniformClass = "U_LIB_SOV_Strelok_summer";
+		backpack = "B_LIB_SOV_RA_GasBag";
+	};
+};

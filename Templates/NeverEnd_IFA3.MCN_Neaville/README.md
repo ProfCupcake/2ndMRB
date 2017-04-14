@@ -19,7 +19,7 @@ Just a never-ending mission that spawns units across various routes to attack Ne
 
 ## Current Settings
 
-* Max 30 Groups per side (Groups with Units)
+* Max 50 Groups per side (Groups with Units)
 * 5 units per Spawn group
 	* Overal Compositions
 	* 2-3 Rifleman

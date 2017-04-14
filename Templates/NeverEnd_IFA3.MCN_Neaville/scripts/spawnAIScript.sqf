@@ -48,7 +48,6 @@
 			["blu_Start", WEST, bluUnits, _x] call compile preprocessfilelinenumbers "scripts\spawnAI.sqf"; 
 		
 		} foreach routes;
-		// Create Spawn per route in routes
 	};
 	
 	if (_opCount <= 30) then {

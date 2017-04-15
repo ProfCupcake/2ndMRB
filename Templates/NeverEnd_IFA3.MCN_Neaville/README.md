@@ -31,7 +31,7 @@ Just a never-ending mission that spawns units across various routes to attack Ne
 * Balance Vehicles Respawn so the vehicle doesn't get destroyed for nothing
 * Units Balance
 * Loadouts -> More specific to Magazine Count and Items on Unit
-* More Routes for AI to move for better unexpected encounters.
+* More Routes for AI to move for better unexpected encounters.(Always A Continous Process)
 * Dynamic Starting Areas
 * Maybe a third side.....
 	

@@ -16,6 +16,8 @@ Just a never-ending mission that spawns units across various routes to attack Ne
 * Purely Infantry as of now
 * Show Control Status of Town (Rough but Simple)
 * 5 non-armed vehicles with respawn on each side for faster movement.
+* Currently Wave Settings, e.g. Initial Size, Frequency, and Tactical Change Frequency can be set from Parameters
+* Included ACE Compatibility, basically changing First Aid Kits to Banadages and Morphine, when using ACE.
 
 ## Current Settings
 
@@ -28,6 +30,7 @@ Just a never-ending mission that spawns units across various routes to attack Ne
 	
 ## Future Changes (Unknown When That Might Be)
 
+* Separate Blufor and Opfor Spawn
 * Balance Vehicles Respawn so the vehicle doesn't get destroyed for nothing
 * Units Balance
 * Loadouts -> More specific to Magazine Count and Items on Unit

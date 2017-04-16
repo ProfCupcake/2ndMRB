@@ -7,15 +7,36 @@ respawnDelay = 15;
 respawnTemplates[] = {"Counter","MenuPosition","MenuInventory"};
 
 class Params {
-	class starting_Wave	{
-        title = "Initial Wave Setting";
+	class max_Groups	{
+        title = "Maximum Groups per Side (5 units per group)";
+        values[] = {25,30,35,40,45,50};
+        texts[] = {"25","30","35","40","45","50"};
+        default = 35;
+    };
+
+	class starting_BLUFORWave	{
+        title = "Initial Blufor Wave Setting";
         values[] = {5,6,7,8,9,10,11,12,13,14,15};
         texts[] = {"5","6","7","8","9","10","11","12","13","14","15"};
         default = 5;
     };
 	
-	class wave_Frequency	{
-        title = "Wave Frequency in seconds";
+	class starting_OPFORWave	{
+        title = "Initial Opfor Wave Setting";
+        values[] = {5,6,7,8,9,10,11,12,13,14,15};
+        texts[] = {"5","6","7","8","9","10","11","12","13","14","15"};
+        default = 5;
+    };
+	
+	class wave_BLUFORFrequency	{
+        title = "Blufor Wave Frequency in seconds";
+        values[] = {30,40,50,60,70,80,90,100,110,120};
+        texts[] = {"30s","40s","50s","1m","1m 10s","1m 20s","1m 30s","1m 40s","1m 50s","2m"};
+        default = 60;
+    };
+	
+	class wave_OPFORFrequency	{
+        title = "Opfor Wave Frequency in seconds";
         values[] = {30,40,50,60,70,80,90,100,110,120};
         texts[] = {"30s","40s","50s","1m","1m 10s","1m 20s","1m 30s","1m 40s","1m 50s","2m"};
         default = 60;
@@ -40,6 +61,13 @@ class Params {
         values[] = {0,1,2};
         texts[] = {"USA","Germany","Russia"};
         default = 1;
+    };
+	
+	class powerbalance_Counter {
+        title = "Show Counter for Power Balance";
+        values[] = {0, 1};
+        texts[] = {"False", "True"};
+        default = 0;
     };
 };
 
@@ -68,7 +96,9 @@ class CfgRespawnInventory
 			"LIB_8Rnd_762x63",
 			"LIB_8Rnd_762x63",
 			"LIB_US_Mk_2",
-			"LIB_US_Mk_2"
+			"LIB_US_Mk_2",
+			"LIB_nb39",
+			"LIB_nb39"
 		};
 		items[] = {
 			"FirstAidKit",
@@ -104,7 +134,9 @@ class CfgRespawnInventory
 			"LIB_20Rnd_762x63",
 			"LIB_20Rnd_762x63",
 			"LIB_US_Mk_2",
-			"LIB_US_Mk_2"
+			"LIB_US_Mk_2",
+			"LIB_nb39",
+			"LIB_nb39"
 		};
 		items[] = {
 			"FirstAidKit",
@@ -140,7 +172,9 @@ class CfgRespawnInventory
 			"LIB_30Rnd_45ACP",
 			"LIB_30Rnd_45ACP",
 			"LIB_US_Mk_2",
-			"LIB_US_Mk_2"
+			"LIB_US_Mk_2",
+			"LIB_nb39",
+			"LIB_nb39"
 		};
 		items[] = {
 			"FirstAidKit",
@@ -294,7 +328,9 @@ class CfgRespawnInventory
 			"LIB_5Rnd_762x54",
 			"LIB_5Rnd_762x54",
 			"LIB_rg42",
-			"LIB_rg42"
+			"LIB_rg42",
+			"LIB_RDG",
+			"LIB_RDG"
 		};
 		items[] = {
 			"FirstAidKit",
@@ -364,7 +400,11 @@ class CfgRespawnInventory
 			"LIB_47Rnd_762x54",
 			"LIB_47Rnd_762x54",
 			"LIB_47Rnd_762x54",
-			"LIB_47Rnd_762x54"
+			"LIB_47Rnd_762x54",
+			"LIB_rg42",
+			"LIB_rg42",
+			"LIB_RDG",
+			"LIB_RDG"
 		};
 		items[] = {
 			"FirstAidKit",
@@ -404,7 +444,9 @@ class CfgRespawnInventory
 			"LIB_8Rnd_762x63",
 			"LIB_8Rnd_762x63",
 			"LIB_US_Mk_2",
-			"LIB_US_Mk_2"
+			"LIB_US_Mk_2",
+			"LIB_nb39",
+			"LIB_nb39"
 		};
 		items[] = {
 			"ACE_fieldDressing",
@@ -445,7 +487,9 @@ class CfgRespawnInventory
 			"LIB_20Rnd_762x63",
 			"LIB_20Rnd_762x63",
 			"LIB_US_Mk_2",
-			"LIB_US_Mk_2"
+			"LIB_US_Mk_2",
+			"LIB_nb39",
+			"LIB_nb39",
 		};
 		items[] = {
 			"ACE_fieldDressing",
@@ -486,7 +530,9 @@ class CfgRespawnInventory
 			"LIB_30Rnd_45ACP",
 			"LIB_30Rnd_45ACP",
 			"LIB_US_Mk_2",
-			"LIB_US_Mk_2"
+			"LIB_US_Mk_2",
+			"LIB_nb39",
+			"LIB_nb39"
 		};
 		items[] = {
 			"ACE_fieldDressing",
@@ -660,7 +706,9 @@ class CfgRespawnInventory
 			"LIB_5Rnd_762x54",
 			"LIB_5Rnd_762x54",
 			"LIB_rg42",
-			"LIB_rg42"
+			"LIB_rg42",
+			"LIB_RDG",
+			"LIB_RDG"
 		};
 		items[] = {
 			"ACE_fieldDressing",
@@ -740,7 +788,11 @@ class CfgRespawnInventory
 			"LIB_47Rnd_762x54",
 			"LIB_47Rnd_762x54",
 			"LIB_47Rnd_762x54",
-			"LIB_47Rnd_762x54"
+			"LIB_47Rnd_762x54",
+			"LIB_rg42",
+			"LIB_rg42",
+			"LIB_RDG",
+			"LIB_RDG"
 		};
 		items[] = {
 			"ACE_fieldDressing",

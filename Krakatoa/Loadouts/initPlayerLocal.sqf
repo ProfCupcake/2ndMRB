@@ -1,0 +1,1 @@
+call compile preprocessfilelinenumbers "inventory\playerInit.sqf";

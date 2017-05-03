@@ -1,7 +1,25 @@
 /*
 Modified BIS_fnc_exportInventory. 
 
-Only difference is that comments have been removed, allowing the base string to be used with compile. 
+Only difference is that comments have been removed, allowing the returned string to be used with compile. 
+*/
+
+/*
+	Author: Karel Moricky
+
+	Description:
+	Export unit's loadout
+
+	Parameter(s):
+		0: OBJECT - unit of which loadout will be export
+		1: STRING - export type
+			"script" - scripting commands, target is referred to as _unit
+			"init" - scripting commands, target is referred to as this
+			"config" - CfgVehicles attributes
+		2: BOOL - true to export identity (face, voice and insignia)
+
+	Returns:
+	STRING - SQF code
 */
 
 _center = _this param [0,player,[objnull]];

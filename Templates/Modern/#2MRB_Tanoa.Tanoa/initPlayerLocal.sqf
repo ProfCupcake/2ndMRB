@@ -10,7 +10,7 @@ if (isNil{CUP_homeBaseSpawn}) then
   waitUntil {player == player};
 	home_base_spawn_location setPos getPos player; 
 	home_base_spawn_location setDir getDir player;
-  CUP_homeBaseSpawn = [player, home_base_spawn_location, "Home Base"] call BIS_fnc_addRespawnPosition;
+  CUP_homeBaseSpawn = [player, home_base_spawn_location, "Start Position"] call BIS_fnc_addRespawnPosition;
   CUP_homeBaseSingleSpawnEH = player addEventHandler ["Respawn", 
   {
     0 spawn

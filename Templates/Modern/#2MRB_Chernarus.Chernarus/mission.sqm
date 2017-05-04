@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=10.953848;
@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12127.47,192.30019,12643.467};
-		dir[]={-0.62642133,-0.49363098,-0.60327041};
-		up[]={-0.35556316,0.86966574,-0.34242323};
-		aside[]={-0.69367528,1.1175871e-007,0.72029525};
+		pos[]={12116.086,192.30019,12591.823};
+		dir[]={-0.13373213,-0.54675388,0.82655513};
+		up[]={-0.087328054,0.83728653,0.53974497};
+		aside[]={0.98717254,9.778887e-008,0.15971953};
 	};
 };
 binarizationWanted=0;
@@ -55,7 +55,7 @@ class AddonsMetaData
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
@@ -81,7 +81,7 @@ class AddonsMetaData
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item6
 		{
@@ -126,7 +126,7 @@ class AddonsMetaData
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item13
 		{

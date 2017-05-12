@@ -1,4 +1,4 @@
-invDB = ["new", "template_invDB"] call OO_INIDBI;
+invDB = ["new", "template_ww2_invDB"] call OO_INIDBI;
 
 invExport = compile preprocessfilelinenumbers "inventory\invExport.sqf";
 

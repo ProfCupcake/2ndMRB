@@ -10,3 +10,5 @@ veh lock 2;
     _veh lock 0;
   };
 }];*/
+
+call compile preprocessfilelinenumbers "inventory\serverInit.sqf";

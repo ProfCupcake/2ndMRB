@@ -5,6 +5,7 @@ player addAction ["<t color='#FF0000'>[ADMIN] Force save all loadouts</t>", {pub
 
 saveRequest = player;
 invRequest = player;
+player addEventHandler ["Respawn", {saveRequest = player; invRequest = player;}];
 
 waitUntil {serverReady};
 

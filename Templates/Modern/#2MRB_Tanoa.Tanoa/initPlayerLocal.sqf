@@ -4,6 +4,8 @@ CUP_arsenalAction = player addAction CUP_arsenalActionParams;
 player addEventHandler ["Killed", {player removeAction CUP_arsenalAction;}];
 player addEventHandler ["Respawn", {player addAction CUP_arsenalActionParams;}];
 
+call compile preprocessfilelinenumbers "inventory\playerInit.sqf";
+
 if (isNil{CUP_homeBaseSpawn}) then
 {
   waitUntil {player == player};
@@ -18,6 +20,7 @@ if (isNil{CUP_homeBaseSpawn}) then
       [player, 0] call BIS_fnc_removeRespawnPosition;
       CUP_seaPlatformSpawn = [player, holding_area_spawn_location, "Holding Area"] call BIS_fnc_addRespawnPosition;
       player removeEventHandler ["Respawn", CUP_homeBaseSingleSpawnEH];
+			publicVariableServer "invRequest";
     };
   }];
 };
@@ -25,8 +28,6 @@ if (isNil{CUP_homeBaseSpawn}) then
 {true} call compile preprocessfilelinenumbers "cupspec\cupspec_init.sqf";
 
 [spectatorcam, 5] call CUPSPEC_addSpectateObject;
-
-call compile preprocessfilelinenumbers "inventory\playerInit.sqf";
 
 CUP_invSaveAction = thebox addAction ["<t color='#ff0000'>Save loadout</t>", {publicVariableServer "saveRequest";}, nil, 3, true, true, "", "true"];
 CUP_invLoadAction = thebox addAction ["<t color='#ff0000'>Load saved loadout</t>", {publicVariableServer "invRequest";}, nil, 2, false, true, "", "true"];

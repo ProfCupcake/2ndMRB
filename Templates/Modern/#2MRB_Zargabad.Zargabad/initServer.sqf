@@ -11,4 +11,4 @@ veh lock 2;
   };
 }];*/
 
-call compile preprocessfilelinenumbers "inventory\serverInit.sqf";
+"template_modern_invDB" call compile preprocessfilelinenumbers "inventory\serverInit.sqf";

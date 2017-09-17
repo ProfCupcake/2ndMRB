@@ -22,7 +22,7 @@ binarizationWanted=0;
 addons[]=
 {
 	"WW2_Assets_c_Characters_Americans_c_US_Rangers",
-	"WW2_Core_c_EditorPreviews_c",
+	"WW2_Core_c_WW2_EditorPreviews_c",
 	"A3_Modules_F",
 	"fow_structures_p_c",
 	"CUP_CWA_Misc",
@@ -53,8 +53,8 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="WW2_Core_c_EditorPreviews_c";
-			name="WW2_Core_c_EditorPreviews_c";
+			className="WW2_Core_c_WW2_EditorPreviews_c";
+			name="WW2_Core_c_WW2_EditorPreviews_c";
 		};
 		class Item2
 		{

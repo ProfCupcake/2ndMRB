@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9171.5449,21.058893,21645.672};
-		dir[]={-0.84304953,-0.37274146,0.38788775};
-		up[]={-0.33868283,0.92790622,0.15582889};
-		aside[]={0.41800681,4.9266964e-007,0.90851009};
+		pos[]={23678.35,28.190001,18027.418};
+		dir[]={-0.52782673,-0.73972911,-0.41737595};
+		up[]={-0.58024168,0.67290473,-0.45882297};
+		aside[]={-0.62025905,7.4505806e-009,0.78439897};
 	};
 };
 binarizationWanted=0;
@@ -34,26 +34,17 @@ addons[]=
 	"rhsusf_c_melb",
 	"ace_compat_rhs_usf3",
 	"CUP_CWA_Misc",
-	"acex_sitting",
 	"A3_Structures_F_Civ_Camping",
+	"acex_sitting",
 	"CUP_Editor_Buildings_Config",
 	"CUP_CAStructures_Castle",
-	"ace_captives",
-	"ace_explosives",
-	"ace_hearing",
-	"ace_map",
-	"A3_Modules_F_Curator_Curator",
-	"ace_finger",
-	"ace_map_gestures",
-	"ace_respawn",
-	"ace_repair",
-	"ace_advanced_fatigue"
+	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=14;
 		class Item0
 		{
 			className="CUP_Misc3_Config";
@@ -113,17 +104,17 @@ class AddonsMetaData
 		};
 		class Item9
 		{
-			className="acex_sitting";
-			name="ACEX - Sitting";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item10
-		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="acex_sitting";
+			name="ACEX - Sitting";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item11
 		{
@@ -137,73 +128,10 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="ace_captives";
-			name="ACE3 - Captives";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item14
-		{
-			className="ace_explosives";
-			name="ACE3 - Explosives";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item15
-		{
-			className="ace_hearing";
-			name="ACE3 - Hearing";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item16
-		{
-			className="ace_map";
-			name="ACE3 - Map";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item17
-		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item18
-		{
-			className="ace_finger";
-			name="ACE3 - Finger";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item19
-		{
-			className="ace_map_gestures";
-			name="ACE3 - Map Gestures";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item20
-		{
-			className="ace_respawn";
-			name="ACE3 - Respawn";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item21
-		{
-			className="ace_repair";
-			name="ACE3 - Repair";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item22
-		{
-			className="ace_advanced_fatigue";
-			name="ACE3 - Advanced Fatigue";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -367,7 +295,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=43;
+		items=33;
 		class Item0
 		{
 			dataType="Object";
@@ -564,7 +492,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -760,7 +688,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -976,7 +904,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
@@ -1380,39 +1308,6 @@ class Mission
 		};
 		class Item19
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={23670.59,3.1900001,18017.91};
-			};
-			id=832;
-			type="ACEX_ModuleSitting";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACEX_ModuleSitting_enable";
-					expression="_this setVariable ['enable',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item20
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -1427,6 +1322,7 @@ class Mission
 			};
 			id=824;
 			type="Land_CampingTable_small_F";
+			atlOffset=0.001301527;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1470,7 +1366,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item21
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1486,7 +1382,7 @@ class Mission
 			id=825;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item22
+		class Item21
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1502,7 +1398,7 @@ class Mission
 			id=826;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item23
+		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1518,7 +1414,7 @@ class Mission
 			id=827;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item24
+		class Item23
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1534,7 +1430,7 @@ class Mission
 			id=828;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item25
+		class Item24
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1550,7 +1446,7 @@ class Mission
 			id=829;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item26
+		class Item25
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1566,7 +1462,7 @@ class Mission
 			id=830;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item27
+		class Item26
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1582,7 +1478,7 @@ class Mission
 			id=831;
 			type="CUP_armchair";
 		};
-		class Item28
+		class Item27
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1599,7 +1495,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=6.5565109e-005;
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1616,7 +1512,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1632,7 +1528,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1649,7 +1545,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1660,385 +1556,17 @@ class Mission
 			id=821;
 			type="Logic";
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9150.9063,14.128423,21688.477};
-				angles[]={0,5.732656,0};
-			};
-			id=849;
-			type="ace_captives_moduleSettings";
-			atlOffset=-0.0026416779;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_captives_moduleSettings_requireSurrender";
-					expression="_this setVariable ['requireSurrender',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_captives_moduleSettings_allowHandcuffOwnSide";
-					expression="_this setVariable ['allowHandcuffOwnSide',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_captives_moduleSettings_allowSurrender";
-					expression="_this setVariable ['allowSurrender',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item34
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9146.6172,14.15169,21686.115};
-				angles[]={0,5.7326598,0};
-			};
-			id=850;
-			type="ACE_ModuleExplosive";
-			atlOffset=-0.0099973679;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_ModuleExplosive_RequireSpecialist";
-					expression="_this setVariable ['RequireSpecialist',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_ModuleExplosive_PunishNonSpecialists";
-					expression="_this setVariable ['PunishNonSpecialists',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ACE_ModuleExplosive_ExplodeOnDefuse";
-					expression="_this setVariable ['ExplodeOnDefuse',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item35
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9142.96,14.18204,21683.758};
-				angles[]={0,5.7326598,0};
-			};
-			id=851;
-			type="ACE_ModuleHearing";
-			atlOffset=-0.0086641312;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_ModuleHearing_autoAddEarplugsToUnits";
-					expression="_this setVariable ['autoAddEarplugsToUnits',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_ModuleHearing_EnableCombatDeafness";
-					expression="_this setVariable ['EnableCombatDeafness',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ACE_ModuleHearing_enabledForZeusUnits";
-					expression="_this setVariable ['enabledForZeusUnits',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ACE_ModuleHearing_DisableEarRinging";
-					expression="_this setVariable ['DisableEarRinging',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=-1;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item36
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9154.3066,14.199518,21690.801};
-				angles[]={0,5.732656,0};
-			};
-			id=852;
-			type="ACE_ModuleMap";
-			atlOffset=0.0099964142;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_ModuleMap_MapShake";
-					expression="_this setVariable ['MapShake',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_ModuleMap_MapShowCursorCoordinates";
-					expression="_this setVariable ['MapShowCursorCoordinates',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ACE_ModuleMap_DefaultChannel";
-					expression="_this setVariable ['DefaultChannel',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=-1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ACE_ModuleMap_MapIllumination";
-					expression="_this setVariable ['MapIllumination',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ACE_ModuleMap_MapGlow";
-					expression="_this setVariable ['MapGlow',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ACE_ModuleMap_MapLimitZoom";
-					expression="_this setVariable ['MapLimitZoom',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=6;
-			};
-		};
-		class Item37
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9146.0215,14.287396,21679.76};
-				angles[]={0,5.732656,0};
+				position[]={9161.1953,14.404464,21652.957};
+				angles[]={0.0013372133,5.732656,6.2818484};
 			};
 			id=853;
 			type="ModuleCurator_F";
-			atlOffset=-0.001999855;
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2133,520 +1661,6 @@ class Mission
 								};
 							};
 							value=3;
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item38
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9149.4063,14.288591,21682.02};
-				angles[]={0,5.732656,0};
-			};
-			id=854;
-			type="ace_finger_moduleSettings";
-			atlOffset=-0.0022678375;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_finger_moduleSettings_maxRange";
-					expression="_this setVariable ['maxRange',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=8;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_finger_moduleSettings_enabled";
-					expression="_this setVariable ['enabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item39
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9152.9688,14.261211,21684.184};
-				angles[]={0,5.732656,0};
-			};
-			id=855;
-			type="ace_map_gestures_moduleSettings";
-			atlOffset=-0.0093317032;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_map_gestures_moduleSettings_maxRange";
-					expression="_this setVariable ['maxRange',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=8;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_map_gestures_moduleSettings_enabled";
-					expression="_this setVariable ['enabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_map_gestures_moduleSettings_defaultLeadColor";
-					expression="_this setVariable ['defaultLeadColor',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ace_map_gestures_moduleSettings_defaultColor";
-					expression="_this setVariable ['defaultColor',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ace_map_gestures_moduleSettings_interval";
-					expression="_this setVariable ['interval',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0.029999999;
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item40
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9156.6816,14.304107,21686.445};
-			};
-			id=856;
-			type="ACE_ModuleRespawn";
-			atlOffset=0.0079984665;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_ModuleRespawn_RemoveDeadBodiesDisconnected";
-					expression="_this setVariable ['RemoveDeadBodiesDisconnected',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_ModuleRespawn_SavePreDeathGear";
-					expression="_this setVariable ['SavePreDeathGear',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item41
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9157.416,14.228693,21692.914};
-			};
-			id=857;
-			type="ACE_moduleRepairSettings";
-			atlOffset=-0.0032224655;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleRepairSettings_fullRepairLocation";
-					expression="_this setVariable ['fullRepairLocation',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_moduleRepairSettings_engineerSetting_fullRepair";
-					expression="_this setVariable ['engineerSetting_fullRepair',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ACE_moduleRepairSettings_engineerSetting_Repair";
-					expression="_this setVariable ['engineerSetting_Repair',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ACE_moduleRepairSettings_consumeItem_ToolKit";
-					expression="_this setVariable ['consumeItem_ToolKit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ACE_moduleRepairSettings_repairDamageThreshold";
-					expression="_this setVariable ['repairDamageThreshold',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0.60000002;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ACE_moduleRepairSettings_wheelRepairRequiredItems";
-					expression="_this setVariable ['wheelRepairRequiredItems',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ACE_moduleRepairSettings_repairDamageThreshold_Engineer";
-					expression="_this setVariable ['repairDamageThreshold_Engineer',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0.30000001;
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="ACE_moduleRepairSettings_engineerSetting_Wheel";
-					expression="_this setVariable ['engineerSetting_Wheel',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="ACE_moduleRepairSettings_addSpareParts";
-					expression="_this setVariable ['addSpareParts',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=9;
-			};
-		};
-		class Item42
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9160.0459,14.305371,21688.746};
-			};
-			id=858;
-			type="ace_advanced_fatigue_moduleSettings";
-			atlOffset=0.0033330917;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_advanced_fatigue_moduleSettings_TerrainGradientFactor";
-					expression="_this setVariable ['TerrainGradientFactor',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_advanced_fatigue_moduleSettings_Enabled";
-					expression="_this setVariable ['Enabled',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_advanced_fatigue_moduleSettings_RecoveryFactor";
-					expression="_this setVariable ['RecoveryFactor',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ace_advanced_fatigue_moduleSettings_LoadFactor";
-					expression="_this setVariable ['LoadFactor',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ace_advanced_fatigue_moduleSettings_PerformanceFactor";
-					expression="_this setVariable ['PerformanceFactor',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1.2;
 						};
 					};
 				};

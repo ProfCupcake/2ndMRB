@@ -9,7 +9,7 @@ Template missions for various terrains. Each one should ideally be named "#2MRB_
 	* Tyrants 1, 1-1, 1-2
 	* Holding area
 	* "Secret" little bird spawn location
-	* ACE modules
+	* ~~ACE modules~~ (now uses CBA Settings framework, hooray!)
 * Copy scripts
 * Attributes
 	* Respawn

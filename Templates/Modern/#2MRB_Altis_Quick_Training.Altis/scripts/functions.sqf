@@ -7,7 +7,7 @@ cqcOut = {
 	if (isServer) then {
 
 		_cqcArea = ["cqcO1","cqcO2","cqcO3","cqcO4","cqcO5"];
-		_selectArea = selectRandom _cqcArea;\
+		_selectArea = selectRandom _cqcArea;
 		_spawnPoint = [1,2,3];
 
 		_bPosition = selectRandom _spawnPoint;

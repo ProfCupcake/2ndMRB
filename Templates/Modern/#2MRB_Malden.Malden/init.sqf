@@ -1,0 +1,1 @@
+["template_modern_invDB"] call compile preprocessfilelinenumbers "cupinv\invInit.sqf";

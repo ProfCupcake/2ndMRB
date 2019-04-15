@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={23678.35,28.190001,18027.418};
-		dir[]={-0.52782673,-0.73972911,-0.41737595};
-		up[]={-0.58024168,0.67290473,-0.45882297};
-		aside[]={-0.62025905,7.4505806e-009,0.78439897};
+		pos[]={9179.5771,135.93832,21556.238};
+		dir[]={0.074763894,-0.84628874,0.52745384};
+		up[]={0.11877003,0.53272438,0.83791286};
+		aside[]={0.99010348,-7.6601282e-008,-0.14034195};
 	};
 };
 binarizationWanted=0;
@@ -295,7 +295,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=33;
+		items=32;
 		class Item0
 		{
 			dataType="Object";
@@ -492,7 +492,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -688,7 +688,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -904,7 +904,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -1035,17 +1035,6 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8153.1558,18.560068,25304.162};
-			};
-			name="cupcakes_secret_littlebird";
-			id=137;
-			type="Logic";
-		};
-		class Item13
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
 				position[]={9166.7139,14.413033,21650.367};
 				angles[]={6.2815623,0,0};
 			};
@@ -1054,7 +1043,7 @@ class Mission
 			type="Logic";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item14
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1113,7 +1102,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item15
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1129,7 +1118,7 @@ class Mission
 			id=807;
 			type="Land_HelipadCircle_F";
 		};
-		class Item16
+		class Item15
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1188,7 +1177,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item17
+		class Item16
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1247,7 +1236,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item18
+		class Item17
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1306,7 +1295,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item19
+		class Item18
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1366,7 +1355,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item20
+		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1382,7 +1371,7 @@ class Mission
 			id=825;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item21
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1398,7 +1387,7 @@ class Mission
 			id=826;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item22
+		class Item21
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1414,7 +1403,7 @@ class Mission
 			id=827;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item23
+		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1430,7 +1419,7 @@ class Mission
 			id=828;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item24
+		class Item23
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1446,7 +1435,7 @@ class Mission
 			id=829;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item25
+		class Item24
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1462,7 +1451,7 @@ class Mission
 			id=830;
 			type="Land_CampingChair_V1_F";
 		};
-		class Item26
+		class Item25
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1478,7 +1467,7 @@ class Mission
 			id=831;
 			type="CUP_armchair";
 		};
-		class Item27
+		class Item26
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1495,7 +1484,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=6.5565109e-005;
 		};
-		class Item28
+		class Item27
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1512,7 +1501,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1528,7 +1517,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1545,7 +1534,7 @@ class Mission
 			type="Land_A_Castle_Wall1_20";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1556,7 +1545,7 @@ class Mission
 			id=821;
 			type="Logic";
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Logic";
 			class PositionInfo
